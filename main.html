@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <title>LIBRARY SYSTEM</title>
+</head>
+
+</html>
+
+<body>
+    <h2 class="thead">THE SHELF</h2>
+    <p class="shead">A use case to create a library management system <br> using React, Python and FastAPI</p>
+    <div class="input-container">
+        <label for="bookname">Book Name ~</label>
+        <input type="text" id="bookname" class="custom-input">
+        <label for="author">Author ~</label>
+        <input type="text" id="authorname" class="custom-input">
+        <button class="simple-button">Add Book</button>
+    </div>
+    <div class="book-list-container">
+        <h3>Available Books</h3>
+        <table class="book-table">
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Borrower</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Hobbit</td>
+                    <td>J.R.R. Tolkien</td>
+                    <td><span class="status available">Available</span></td>
+                    <td class="borrower-name">-</td>
+                    <td>
+                        <div class="action-group">
+                            <button class="action-btn borrow-btn">Borrow</button>
+                            <button class="action-btn update-btn">Update</button>
+                            <button class="action-btn delete-btn">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Clean Code</td>
+                    <td>Robert C. Martin</td>
+                    <td><span class="status borrowed">Borrowed</span></td>
+                    <td class="borrower-name">ABC</td>
+                    <td>
+                        <div class="action-group">
+                            <button class="action-btn return-btn">Return</button>
+                            <button class="action-btn update-btn">Update</button>
+                            <button class="action-btn delete-btn">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        alert("THIS IS A LIBRARY MANAGEMENT SYSTEM");
+        'use strict';
+        let message = "Hello!";
+    </script>
+</body>
+
+</html>
