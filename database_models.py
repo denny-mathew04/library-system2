@@ -1,8 +1,13 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import Column, Integer, String, Float
 
+Base = declarative_base()
 
+class Books(Base):
 
-db_url = "postgresql+psycopg2://postgres:aleena%402004@localhost:5432/"
-engine = create_engine(db_url)
-LocalSession = sessionmaker(autocommit = False , autoflush = False , bind = engine)
+    __tablename__="books"
+
+    name = Column(String)
+    author = Column(String)
+    status = Column(String)
+    borrower = Column(String)
