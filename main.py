@@ -19,7 +19,7 @@ database_models.Base.metadata.create_all(bind=engine)
 
 default_books = [
     Books(name="The Great Gatsby", author="F. Scott Fitzgerald", status="available", borrower=None),
-    Books(name="To Kill a Mockingbird", author="Harper Lee", status="borrowed", borrower="John Doe"),
+    Books(name="To Kill a Mockingbird", author="Harper Lee", status="available", borrower=None),
     Books(name="1984", author="George Orwell", status="available", borrower=None)
 ]
 
@@ -54,7 +54,6 @@ def all_books(db: Session = Depends(get_db)):
 
 @app.post("/books")
 def add_books(book: Books, db: Session = Depends(get_db)):
-    # Check if   already exists
     db_book = db.query(database_models.Books).filter(database_models.Books.name == book.name).first()
     if db_book:
         return "Book already exists"  
