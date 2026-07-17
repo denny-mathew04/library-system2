@@ -1,11 +1,13 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String, Float
 
 Base = declarative_base()
 
 class Books(Base):
 
-    __tablename__="books"
+    __tablename__='books'
+
+    id = Column(Integer, primary_key=True, index=True)
 
     name = Column(String)
     author = Column(String)
